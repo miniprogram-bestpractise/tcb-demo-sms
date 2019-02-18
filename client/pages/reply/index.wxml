@@ -1,0 +1,72 @@
+<import src="../common/head.wxml"/>
+<import src="../common/foot.wxml"/>
+
+<view class="container">
+  <template is="head" data="{{title}}"/>
+    <view class="page__bd">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">手机号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input
+                  class="weui-input"
+                  placeholder="请输入手机号"
+                  bindinput="recordPhoneNumber"
+                />
+            </view>
+        </view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <picker
+            mode="time"
+            value="{{time}}"
+            start="09:01"
+            end="21:01"
+            bindchange="bindTimeChange"
+          >
+            <view class="picker">
+              开始时间: {{time}}
+            </view>
+          </picker>
+          <picker
+            mode="time"
+            value="{{time}}"
+            start="09:01"
+            end="21:01"
+            bindchange="bindTimeChange"
+          >
+            <view class="picker">
+              结束时间: {{time}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <radio-group class="radio-group" bindchange="typeChange">
+        <label class="radio">
+          <radio color='#006eff' value="sms-single-send-template" checked='true' />
+          单个手机回执
+        </label>
+        <label class="radio">
+          <radio color='#006eff' value="sms-multi-send"/>
+          单个手机回复
+        </label>
+        <view class="gap"></view>
+        <label class="radio">
+          <radio color='#006eff' value="sms-multi-send-template"/>
+          手机回执
+        </label>
+        <label class="radio">
+          <radio color='#006eff' value="sms-multi-send-template"/>
+          手机回复
+        </label>
+      </radio-group>
+
+      <button class="weui-btn verify-button" type="primary" bindtap="sendSMS">发送</button>
+    </view>
+  <template is="foot" />
+</view>

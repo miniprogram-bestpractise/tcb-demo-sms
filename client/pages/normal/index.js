@@ -1,5 +1,5 @@
 import regeneratorRuntime from '../../libs/runtime'
-import TcbService from '../../libs/tcb-service-js-sdk/index'
+import TcbService from '../../libs/tcb-service-mp-sdk/index'
 let tcbService = new TcbService(wx.cloud)
 
 Page({
@@ -9,7 +9,7 @@ Page({
    */
   data: {
     title: '普通短信通知',
-    type: 'sms-single-send-template',
+    type: 'SmsSingleSendTemplate',
     phoneNumber: ''
   },
 
@@ -32,13 +32,13 @@ Page({
       phoneNumber
     } = this.data
 
-    if (type === 'sms-single-send-template') {
+    if (type === 'SmsSingleSendTemplate') {
       data.phoneNumber = phoneNumber
     }
-    else if (type === 'sms-multi-send') {
+    else if (type === 'SmsMultiSend') {
       data.phoneNumbers = phoneNumber.split(',')
     }
-    else if (type === 'sms-multi-send-template') {
+    else if (type === 'SmsMultiSendTemplate') {
       data.phoneNumbers = phoneNumber.split(',')
     }
 

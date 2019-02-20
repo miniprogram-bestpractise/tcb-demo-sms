@@ -21,15 +21,15 @@
 
       <radio-group class="radio-group" bindchange="typeChange">
         <label class="radio">
-          <radio color='#006eff' value="sms-single-send-template" checked='true' />
+          <radio color='#006eff' value="SmsSingleSendTemplate" checked='true' />
           单发（模板）
         </label>
         <label class="radio">
-          <radio color='#006eff' value="sms-multi-send"/>
+          <radio color='#006eff' value="SmsMultiSend"/>
           群发
         </label>
         <label class="radio">
-          <radio color='#006eff' value="sms-multi-send-template"/>
+          <radio color='#006eff' value="SmsMultiSendTemplate"/>
           群发（模板）
         </label>
       </radio-group>

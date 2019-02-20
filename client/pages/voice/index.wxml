@@ -21,16 +21,16 @@
 
       <radio-group class="radio-group" bindchange="typeChange">
         <label class="radio">
-          <radio color='#006eff' value="prompt-voice-send" checked='true' />
+          <radio color='#006eff' value="PromptVoiceSend" checked='true' />
           单发
         </label>
         <label class="radio">
-          <radio color='#006eff' value="tts-voice-send"/>
+          <radio color='#006eff' value="TtsVoiceSend"/>
           单发（指定模板）
         </label>
         <view class="gap"></view>
         <label class="radio">
-          <radio color='#006eff' value="file-voice-send"/>
+          <radio color='#006eff' value="FileVoiceSend"/>
           单发（指定语音文件）
         </label>
       </radio-group>

@@ -43,7 +43,7 @@ Page({
      } = this.data
     
     let { result } = await wx.cloud.callFunction({
-      name: 'create-verification-code',
+      name: 'CreateVerificationCode',
       data: {
         type,
         phoneNumber
@@ -86,7 +86,7 @@ Page({
     }
   
     let { result } = await wx.cloud.callFunction({
-      name: 'verify-verification-code',
+      name: 'VerifyVerificationCode',
       data: {
         code
       }

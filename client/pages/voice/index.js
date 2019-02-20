@@ -1,5 +1,5 @@
 import regeneratorRuntime from '../../libs/runtime'
-import TcbService from '../../libs/tcb-service-js-sdk/index'
+import TcbService from '../../libs/tcb-service-mp-sdk/index'
 let tcbService = new TcbService(wx.cloud)
 
 Page({
@@ -9,7 +9,7 @@ Page({
    */
   data: {
     title: '语音短信通知',
-    type: 'prompt-voice-send',
+    type: 'PromptVoiceSend',
     phoneNumber: ''
   },
 
@@ -50,7 +50,7 @@ Page({
     }
     else {
       wx.showToast({
-        title: '发送短信失败',
+        title: result.message,
         icon: 'none'
       })
     }

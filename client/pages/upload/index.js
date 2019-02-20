@@ -1,5 +1,5 @@
 import regeneratorRuntime from '../../libs/runtime'
-import TcbService from '../../libs/tcb-service-js-sdk/index'
+import TcbService from '../../libs/tcb-service-mp-sdk/index'
 let tcbService = new TcbService(wx.cloud)
 
 Page({
@@ -31,7 +31,7 @@ Page({
 
     let result = await tcbService.callService({
       service: 'sms',
-      action: 'voice-file-upload',
+      action: 'VoiceFileUpload',
       data: {
         fileID
       }

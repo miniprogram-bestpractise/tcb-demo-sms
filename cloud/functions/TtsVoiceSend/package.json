@@ -1,5 +1,5 @@
 {
-  "name": "tts-voice-send",
+  "name": "TtsVoiceSend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

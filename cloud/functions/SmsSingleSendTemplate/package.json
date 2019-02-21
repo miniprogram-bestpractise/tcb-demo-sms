@@ -1,5 +1,5 @@
 {
-  "name": "sms-single-send-template",
+  "name": "SmsSingleSendTemplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

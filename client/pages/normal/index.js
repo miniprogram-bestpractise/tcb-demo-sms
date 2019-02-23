@@ -1,6 +1,6 @@
 import regeneratorRuntime from '../../libs/runtime'
 import TcbService from '../../libs/tcb-service-mp-sdk/index'
-let tcbService = new TcbService(wx.cloud)
+let tcbService = new TcbService()
 
 Page({
 
